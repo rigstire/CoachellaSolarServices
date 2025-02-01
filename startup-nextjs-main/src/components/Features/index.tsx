@@ -8,8 +8,8 @@ const Features = () => {
       <section id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="Main Features"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="Our Services"
+            paragraph="At Coachella Solar Services, we offer expert cleaning and maintenance services, including window cleaning, solar panel cleaning, gutter cleaning, bird proofing, and pressure washing. Our team delivers top-quality results to keep your property looking its best"
             center
           />
 

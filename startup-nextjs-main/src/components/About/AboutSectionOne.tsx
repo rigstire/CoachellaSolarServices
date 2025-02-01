@@ -24,8 +24,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="Top Solar Cleaning Experts"
+                paragraph="Coachella Solar Services provides professional solar panel cleaning and maintenance to ensure optimal performance and efficiency. Our expert solutions help extend the lifespan of your solar system, keeping it running at its best year-round"
                 mb="44px"
               />
 
@@ -35,21 +35,21 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text="Expert Solar Panel Cleaning" />
+                    <List text="Boost Energy Efficiency" />
+                    <List text="Extend Panel Lifespan" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text="Eco-Friendly Solutions" />
+                    <List text="Affordable Pricing" />
+                    <List text="Reliable, Local Service" />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="w-full px-4 lg:w-1/2">
+            {/* <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
                 <Image
                   src="/images/about/about-image.svg"
@@ -64,7 +64,7 @@ const AboutSectionOne = () => {
                   className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
