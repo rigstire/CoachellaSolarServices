@@ -5,28 +5,28 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "John D.",
+    designation: "",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "I’ve used several cleaning services for my home, but nothing compares to the amazing job this team did. Their solar panel cleaning service increased our energy efficiency right away! They also cleaned our windows and gutters, and everything looks spotless. Highly recommend for anyone looking to keep their home and solar panels in top condition!",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "Edward S.",
+    designation: "",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "The team at [Company Name] was fantastic. They cleaned my gutters and performed soft washing on my home’s exterior, making it look brand new. I also had bird-proofing done around my solar panels to prevent any damage, and the results are great. Professional, quick, and affordable service!",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Mark T.",
+    designation: "",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Excellent service from start to finish. I had both pressure washing and concrete cleaning done on my driveway and patio, and the transformation was incredible! I also took advantage of their solar panel cleaning service, which helped restore the efficiency of my panels. I’ll definitely be using them again for regular maintenance.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -37,8 +37,8 @@ const Testimonials = () => {
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="What Our Customers Say"
+          paragraph="Our clients love how our expert solar panel cleaning services boost their system's efficiency and extend the life of their solar panels. Here's what they have to say!"
           center
         />
 

@@ -16,15 +16,17 @@ const AboutSectionTwo = () => {
                 fill
                 className="drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
-              <Image
-                src="/images/about/about-image-2-dark.svg"
-                alt="about image"
-                fill
-                className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
-              />
+<div style={{ width: 'auto', height: 'auto' }}> {/* Full viewport width */}
+  <Image
+    src="/images/about/solarimage.jpg"
+    alt="solarimage.jpg"
+    fill
+    className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
+  />
+</div>
             </div>
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          {/* <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
@@ -54,7 +56,7 @@ const AboutSectionTwo = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

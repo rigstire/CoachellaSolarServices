@@ -5,7 +5,7 @@ import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 
 const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
+  // const [isMonthly, setIsMonthly] = useState(true);
 
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
@@ -19,7 +19,7 @@ const Pricing = () => {
 
         <div className="w-full">
           <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
-            <span
+            {/* <span
               onClick={() => setIsMonthly(true)}
               className={`${
                 isMonthly
@@ -28,8 +28,8 @@ const Pricing = () => {
               } mr-4 cursor-pointer text-base font-semibold`}
             >
               Monthly
-            </span>
-            <div
+            </span> */}
+            {/* <div
               onClick={() => setIsMonthly(!isMonthly)}
               className="flex cursor-pointer items-center"
             >
@@ -43,8 +43,8 @@ const Pricing = () => {
                   <span className="active h-4 w-4 rounded-full bg-white"></span>
                 </div>
               </div>
-            </div>
-            <span
+            </div> */}
+            {/* <span
               onClick={() => setIsMonthly(false)}
               className={`${
                 isMonthly
@@ -53,15 +53,15 @@ const Pricing = () => {
               } ml-4 cursor-pointer text-base font-semibold`}
             >
               Yearly
-            </span>
+            </span> */}
           </div>
         </div>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Lite"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
+            price={"120"}
+            duration={""}
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
           >
             <OfferList text="All UI Components" status="active" />
@@ -73,8 +73,8 @@ const Pricing = () => {
           </PricingBox>
           <PricingBox
             packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
+            price={"789"}
+            duration={""}
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
           >
             <OfferList text="All UI Components" status="active" />
@@ -86,8 +86,8 @@ const Pricing = () => {
           </PricingBox>
           <PricingBox
             packageName="Plus"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
+            price={"999"}
+            duration={"yr"}
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
           >
             <OfferList text="All UI Components" status="active" />
