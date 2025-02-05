@@ -9,7 +9,6 @@ const services = [
     description:
       "Our expert pressure washing services remove dirt, mold, and grime from exterior surfaces, leaving them spotless. Whether it's your driveway, patio, or home siding, we restore surfaces to their original look with safe and effective cleaning techniques.",
     image: "/images/pressurewashing.jpeg",
-    extraImage: "/images/pressurewashingtwo.jpeg", // Second image for extra detail
   },
   {
     title: "Bird Proofing",
@@ -88,15 +87,15 @@ const Services = () => {
 
       {/* Services Grid */}
       <Container maxWidth="lg">
-        <Grid container spacing={6} sx={{ mt: 6 }}>
+        <Grid container spacing={6} sx={{ mt: 6, alignItems: "stretch" }}>
           {services.map((service, index) => (
-            <Grid item xs={12} md={6} key={index}>
+            <Grid item xs={12} md={6} key={index} sx={{ display: "flex" }}>
               <Card
                 elevation={8}
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  maxWidth: "100%",
+                  flex: 1,
                   borderRadius: 3,
                   overflow: "hidden",
                   transition: "transform 0.3s ease-in-out",
@@ -117,7 +116,16 @@ const Services = () => {
                   />
                 </Box>
 
-                <CardContent sx={{ textAlign: "left", p: 4 }}>
+                {/* Card Content */}
+                <CardContent
+                  sx={{
+                    textAlign: "left",
+                    p: 4,
+                    display: "flex",
+                    flexDirection: "column",
+                    flexGrow: 1,
+                  }}
+                >
                   <Typography
                     variant="h4"
                     sx={{
@@ -134,34 +142,14 @@ const Services = () => {
                       fontFamily: "'Roboto', sans-serif",
                       opacity: 0.9,
                       lineHeight: 1.8,
+                      mb: 2,
                     }}
                   >
                     {service.description}
                   </Typography>
 
-                  {/* Pressure Washing Extra Image */}
-                  {service.title === "Pressure Washing" && (
-                    <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
-                      <Box sx={{ position: "relative", width: "48%", height: 250, mr: 1 }}>
-                        <Image
-                          src={service.image}
-                          alt="Pressure Washing Before"
-                          layout="fill"
-                          objectFit="cover"
-                          quality={80}
-                        />
-                      </Box>
-                      <Box sx={{ position: "relative", width: "48%", height: 250 }}>
-                        <Image
-                          src={service.extraImage as string}
-                          alt="Pressure Washing After"
-                          layout="fill"
-                          objectFit="cover"
-                          quality={80}
-                        />
-                      </Box>
-                    </Box>
-                  )}
+                  {/* Spacer to push the button to the bottom */}
+                  <Box sx={{ flexGrow: 1 }} />
 
                   {/* Book Now Button */}
                   <Box sx={{ mt: 3 }}>

@@ -1,4 +1,4 @@
-"use client";  // Add this to mark the file as a client-side component
+"use client";  // Marking this as a client-side component
 import { Box, Typography, Container, Card, CardContent, Grid, Button } from "@mui/material";
 import Image from "next/image";
 import YouTube from "react-youtube";
@@ -11,12 +11,11 @@ const FactsPage = () => {
     height: "400",
     width: "100%",
     playerVars: {
-      autoplay: 0,  // Prevent videos from auto-playing
+      autoplay: 0,  // Prevent auto-play
     },
   };
 
   const handleVideoClick = (videoId: string) => {
-    // If the same video is clicked, stop it, else start the new one
     setPlayingVideo(playingVideo === videoId ? null : videoId);
   };
 
@@ -48,9 +47,9 @@ const FactsPage = () => {
       {/* Main Content */}
       <Container maxWidth="lg" sx={{ mt: 8 }}>
         <Grid container spacing={6}>
-          {/* Fact 1 - Dirty vs Clean Solar Panel Power Output Comparison */}
+          {/* Fact 1 */}
           <Grid item xs={12} md={6}>
-            <Card sx={{ borderRadius: 3, overflow: "hidden", boxShadow: 4, bgcolor: "white" }}>
+            <Card sx={{ borderRadius: 3, overflow: "hidden", boxShadow: 4 }}>
               <Image
                 src="/images/solarcleaning.jpeg"
                 alt="Dirty vs Clean Solar Panels"
@@ -70,20 +69,16 @@ const FactsPage = () => {
                 </Typography>
                 <Box sx={{ mt: 2 }}>
                   <div onClick={() => handleVideoClick("9gvOGiBp3lU")}>
-                    <YouTube
-                      videoId="9gvOGiBp3lU"
-                      opts={videoOpts}
-                      style={{ cursor: "pointer" }}
-                    />
+                    <YouTube videoId="9gvOGiBp3lU" opts={videoOpts} style={{ cursor: "pointer" }} />
                   </div>
                 </Box>
               </CardContent>
             </Card>
           </Grid>
 
-          {/* Fact 2 - Should You Clean Your Solar Panels? */}
+          {/* Fact 2 */}
           <Grid item xs={12} md={6}>
-            <Card sx={{ borderRadius: 3, overflow: "hidden", boxShadow: 4, bgcolor: "white" }}>
+            <Card sx={{ borderRadius: 3, overflow: "hidden", boxShadow: 4 }}>
               <Image
                 src="/images/supdadupawash.jpg"
                 alt="Should You Clean Your Solar Panels?"
@@ -103,11 +98,7 @@ const FactsPage = () => {
                 </Typography>
                 <Box sx={{ mt: 2 }}>
                   <div onClick={() => handleVideoClick("icGPVH7sQcU")}>
-                    <YouTube
-                      videoId="icGPVH7sQcU"
-                      opts={videoOpts}
-                      style={{ cursor: "pointer" }}
-                    />
+                    <YouTube videoId="icGPVH7sQcU" opts={videoOpts} style={{ cursor: "pointer" }} />
                   </div>
                 </Box>
               </CardContent>
@@ -116,61 +107,20 @@ const FactsPage = () => {
         </Grid>
       </Container>
 
-      {/* Section 3: Benefits of Solar Panel Cleaning */}
-      <Box sx={{ py: 8, bgcolor: "#e1effd" }}>
+      {/* Benefits Section */}
+      <Box sx={{ py: 8, bgcolor: "#dde9f8" }}>
         <Container maxWidth="lg">
-          <Typography variant="h4" fontWeight={700} color="#2a5298" gutterBottom>
+          <Typography variant="h4" fontWeight={700} color="#153e75" gutterBottom>
             Why You Should Clean Your Solar Panels
           </Typography>
           <Typography variant="body1" sx={{ lineHeight: 1.8, opacity: 0.9, mb: 4 }}>
-            Regular solar panel cleaning isn’t just about aesthetics. It’s about ensuring your system operates at peak performance, enhancing its
-            energy output, and prolonging its lifespan. Below are the top reasons why keeping your solar panels clean is crucial:
+            Regular solar panel cleaning isn’t just about aesthetics. It ensures peak performance, enhances energy output, and prolongs your system’s lifespan.
           </Typography>
-          <Grid container spacing={4}>
-            <Grid item xs={12} sm={6} md={4}>
-              <Card sx={{ bgcolor: "white", boxShadow: 3, borderRadius: 2 }}>
-                <CardContent>
-                  <Typography variant="h6" fontWeight={600} color="#2a5298" gutterBottom>
-                    1. Enhanced Energy Efficiency
-                  </Typography>
-                  <Typography variant="body2">
-                    Cleaning your solar panels ensures they capture more sunlight, leading to better energy efficiency and reduced electricity costs.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Card sx={{ bgcolor: "white", boxShadow: 3, borderRadius: 2 }}>
-                <CardContent>
-                  <Typography variant="h6" fontWeight={600} color="#2a5298" gutterBottom>
-                    2. Prolonged System Lifespan
-                  </Typography>
-                  <Typography variant="body2">
-                    Regular cleaning removes contaminants that can degrade your solar panels over time, helping to extend their lifespan and optimize
-                    long-term performance.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Card sx={{ bgcolor: "white", boxShadow: 3, borderRadius: 2 }}>
-                <CardContent>
-                  <Typography variant="h6" fontWeight={600} color="#2a5298" gutterBottom>
-                    3. Maximized Return on Investment (ROI)
-                  </Typography>
-                  <Typography variant="body2">
-                    A clean solar panel system operates at full capacity, delivering the best return on your investment and ensuring you get the most
-                    out of your solar energy setup.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
         </Container>
       </Box>
 
-      {/* Call to Action Section */}
-      <Box sx={{ py: 8, textAlign: "center", bgcolor: "#153e75", color: "#F5F7FA", mt: 8 }}>
+      {/* Call to Action */}
+      <Box sx={{ py: 8, textAlign: "center", bgcolor: "#153e75", color: "#FFD700", mt: 8 }}>
         <Typography variant="h5" fontWeight={600}>
           Maximize Your Solar Investment with Professional Cleaning
         </Typography>
@@ -180,9 +130,14 @@ const FactsPage = () => {
         </Typography>
         <Button
           variant="contained"
-          color="secondary"
-          size="large"
-          sx={{ mt: 3, px: 5, fontSize: "1.2rem" }}
+          sx={{
+            mt: 3,
+            px: 5,
+            fontSize: "1.2rem",
+            bgcolor: "#FFD700",
+            color: "#153e75",
+            "&:hover": { bgcolor: "#FFC107" },
+          }}
           href="mailto:officialtopsoftware@gmail.com"
         >
           Contact Us Today
