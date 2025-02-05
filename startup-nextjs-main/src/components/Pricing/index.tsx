@@ -12,7 +12,7 @@ const Pricing = () => {
       <div className="container">
         <SectionTitle
           title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="We offer clear and competitive pricing for all our services, ensuring you get the best value without hidden fees."
           center
           width="665px"
         />
@@ -59,44 +59,32 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={"120"}
+            packageName="Flat"
+            price={"70"}
             duration={""}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="For 17 Panels or Less"
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+           <OfferList text="Boost Efficiency" status="active" />
+            <OfferList text="Maximize Output" status="active" />
+            <OfferList text="Eco-Friendly Service" status="active" />
+            <OfferList text="Prevent Damage" status="active" />
+            <OfferList text="Increase Longevity" status="active" />
+            <OfferList text="Professional Cleaning" status="inactive" />
           </PricingBox>
           <PricingBox
-            packageName="Basic"
-            price={"789"}
+            packageName="Per panel"
+            price={"4"}
             duration={""}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="For 17 Panels or More"
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Boost Efficiency" status="active" />
+            <OfferList text="Maximize Output" status="active" />
+            <OfferList text="Eco-Friendly Service" status="active" />
+            <OfferList text="Prevent Damage" status="active" />
+            <OfferList text="Increase Longevity" status="active" />
+            <OfferList text="Professional Cleaning" status="inactive" />
           </PricingBox>
-          <PricingBox
-            packageName="Plus"
-            price={"999"}
-            duration={"yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
-          </PricingBox>
+          
         </div>
       </div>
 
