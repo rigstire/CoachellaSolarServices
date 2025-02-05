@@ -1,6 +1,7 @@
 import React from "react";
-import Image from "next/image"; // Import Next.js Image component
-import { Card, CardContent, Typography, Grid, Box, Container } from "@mui/material";
+import Image from "next/image";
+import { Card, CardContent, Typography, Grid, Box, Container, Button } from "@mui/material";
+import Link from "next/link";
 
 const services = [
   {
@@ -8,6 +9,7 @@ const services = [
     description:
       "Our expert pressure washing services remove dirt, mold, and grime from exterior surfaces, leaving them spotless. Whether it's your driveway, patio, or home siding, we restore surfaces to their original look with safe and effective cleaning techniques.",
     image: "/images/pressurewashing.jpeg",
+    extraImage: "/images/pressurewashingtwo.jpeg", // Second image for extra detail
   },
   {
     title: "Bird Proofing",
@@ -48,8 +50,8 @@ const Services = () => {
       <Box
         sx={{
           position: "relative",
-          height: 400,
-          background: "linear-gradient(45deg, #1e3c72, #2a5298)",
+          height: 350,
+          background: "linear-gradient(135deg, #1e3c72, #2a5298)",
           color: "white",
           display: "flex",
           flexDirection: "column",
@@ -59,11 +61,28 @@ const Services = () => {
           px: 2,
         }}
       >
-        <Typography variant="h3" fontWeight={700} gutterBottom>
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: 700,
+            fontFamily: "'Poppins', sans-serif",
+          }}
+        >
           Our Services
         </Typography>
-        <Typography variant="h6" sx={{ maxWidth: 700, opacity: 0.9 }}>
-          We specialize in top-tier exterior cleaning solutions, ensuring your property stays spotless, safe, and well-maintained.
+        <Typography
+          variant="h6"
+          sx={{
+            fontFamily: "'Roboto', sans-serif",
+            fontSize: "1.2rem",
+            fontWeight: 300,
+            opacity: 0.9,
+            marginTop: 1,
+            lineHeight: 1.7,
+            maxWidth: 700,
+          }}
+        >
+          High-quality exterior cleaning solutions designed to protect and enhance your property.
         </Typography>
       </Box>
 
@@ -86,23 +105,82 @@ const Services = () => {
                   color: "white",
                 }}
               >
+                {/* Service Image */}
                 <Box sx={{ position: "relative", width: "100%", height: 400 }}>
                   <Image
                     src={service.image}
                     alt={service.title}
                     layout="fill"
                     objectFit="cover"
-                    quality={80} // Optimized for quality vs. performance
-                    priority={index < 2} // Prioritize loading top images first
+                    quality={80}
+                    priority={index < 2}
                   />
                 </Box>
+
                 <CardContent sx={{ textAlign: "left", p: 4 }}>
-                  <Typography variant="h4" fontWeight={700} gutterBottom>
+                  <Typography
+                    variant="h4"
+                    sx={{
+                      fontWeight: 700,
+                      fontFamily: "'Poppins', sans-serif",
+                    }}
+                    gutterBottom
+                  >
                     {service.title}
                   </Typography>
-                  <Typography variant="body1" sx={{ opacity: 0.9, lineHeight: 1.8 }}>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      fontFamily: "'Roboto', sans-serif",
+                      opacity: 0.9,
+                      lineHeight: 1.8,
+                    }}
+                  >
                     {service.description}
                   </Typography>
+
+                  {/* Pressure Washing Extra Image */}
+                  {service.title === "Pressure Washing" && (
+                    <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+                      <Box sx={{ position: "relative", width: "48%", height: 250, mr: 1 }}>
+                        <Image
+                          src={service.image}
+                          alt="Pressure Washing Before"
+                          layout="fill"
+                          objectFit="cover"
+                          quality={80}
+                        />
+                      </Box>
+                      <Box sx={{ position: "relative", width: "48%", height: 250 }}>
+                        <Image
+                          src={service.extraImage as string}
+                          alt="Pressure Washing After"
+                          layout="fill"
+                          objectFit="cover"
+                          quality={80}
+                        />
+                      </Box>
+                    </Box>
+                  )}
+
+                  {/* Book Now Button */}
+                  <Box sx={{ mt: 3 }}>
+                    <Link href="/contact" passHref>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          backgroundColor: "#ff9800",
+                          "&:hover": { backgroundColor: "#f57c00" },
+                          fontWeight: "bold",
+                          fontSize: "1rem",
+                          fontFamily: "'Poppins', sans-serif",
+                        }}
+                        fullWidth
+                      >
+                        Book Now
+                      </Button>
+                    </Link>
+                  </Box>
                 </CardContent>
               </Card>
             </Grid>
@@ -112,7 +190,13 @@ const Services = () => {
 
       {/* Call to Action */}
       <Box sx={{ py: 8, textAlign: "center", bgcolor: "#153e75", color: "white", mt: 8 }}>
-        <Typography variant="h5" fontWeight={600}>
+        <Typography
+          variant="h5"
+          sx={{
+            fontWeight: 600,
+            fontFamily: "'Poppins', sans-serif",
+          }}
+        >
           Contact us today for a free consultation and get your property looking brand new!
         </Typography>
       </Box>

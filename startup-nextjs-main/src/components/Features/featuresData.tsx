@@ -1,6 +1,6 @@
 import { Feature } from "@/types/feature";
 
-const featuresData: Feature[] = [
+export const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
@@ -17,7 +17,7 @@ const featuresData: Feature[] = [
       "Sparkling windows, clear views! Let our professional window cleaning services brighten your home or office with spotless, streak-free results.",
   },
   {
-    id: 1,
+    id: 2,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -32,7 +32,7 @@ const featuresData: Feature[] = [
       "Maximize your energy efficiency with our expert solar panel cleaning services—boost performance and extend the life of your panels with a spotless shine!",
   },
   {
-    id: 1,
+    id: 3,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -47,7 +47,7 @@ const featuresData: Feature[] = [
       "Keep your home safe from water damage! Our professional gutter cleaning ensures smooth drainage and protects your property from costly repairs.",
   },
   {
-    id: 1,
+    id: 4,
     icon: (
       <svg width="40" height="42" viewBox="0 0 40 42" className="fill-current">
         <path
@@ -62,7 +62,7 @@ const featuresData: Feature[] = [
       "Say goodbye to unwanted birds! Our bird proofing services protect your home from nests, damage, and mess while keeping your property safe and clean.",
   },
   {
-    id: 1,
+    id: 5,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -77,7 +77,7 @@ const featuresData: Feature[] = [
       "Restore the beauty of your concrete surfaces! Our concrete cleaning services remove grime, stains, and buildup, leaving your driveway, patio, or walkway looking brand new.",
   },
   {
-    id: 1,
+    id: 6,
     icon: (
       <svg width="40" height="45" viewBox="0 0 40 45" className="fill-current">
         <path
@@ -92,4 +92,39 @@ const featuresData: Feature[] = [
       "Revitalize your home with our expert washing services! From soft washing your exterior to pressure washing driveways and patios, we remove dirt, grime, and stains for a spotless, refreshed look.",
   },
 ];
-export default featuresData;
+export default function FeaturesSection() {
+  return (
+    <section className="relative w-full h-screen">
+      {/* Background Video */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+      >
+        <source src="/video/background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay to darken the video for readability */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center p-6">
+        <h2 className="text-4xl font-bold mb-6">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {featuresData.map((feature) => (
+            <div
+              key={feature.id}
+              className="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg"
+            >
+              <div className="mb-4 text-primary">{feature.icon}</div>
+              <h3 className="text-xl font-semibold">{feature.title}</h3>
+              <p className="text-sm">{feature.paragraph}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
