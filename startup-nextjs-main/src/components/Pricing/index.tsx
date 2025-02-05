@@ -57,7 +57,8 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-8">
+
           <PricingBox
             packageName="Flat"
             price={"70"}
