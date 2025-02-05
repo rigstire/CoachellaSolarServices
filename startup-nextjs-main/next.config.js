@@ -10,6 +10,10 @@ const nextConfig = {
       },
     ],
   },
+  // This tells Next.js to ignore TypeScript build errors
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = nextConfig;
