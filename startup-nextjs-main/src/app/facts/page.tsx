@@ -69,7 +69,7 @@ const FactsPage = () => {
                 </Typography>
                 <Box sx={{ mt: 2 }}>
                   <div onClick={() => handleVideoClick("9gvOGiBp3lU")}>
-                    <YouTube videoId="9gvOGiBp3lU" opts={videoOpts} style={{ cursor: "pointer" }} />
+                    {/* <YouTube videoId="9gvOGiBp3lU" opts={videoOpts} style={{ cursor: "pointer" }} /> */}
                   </div>
                 </Box>
               </CardContent>
@@ -98,7 +98,7 @@ const FactsPage = () => {
                 </Typography>
                 <Box sx={{ mt: 2 }}>
                   <div onClick={() => handleVideoClick("icGPVH7sQcU")}>
-                    <YouTube videoId="icGPVH7sQcU" opts={videoOpts} style={{ cursor: "pointer" }} />
+                    {/* <YouTube videoId="icGPVH7sQcU" opts={videoOpts} style={{ cursor: "pointer" }} /> */}
                   </div>
                 </Box>
               </CardContent>
