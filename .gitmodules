@@ -1,0 +1,3 @@
+[submodule "startup-nextjs-main/CoachellaSolarServices"]
+	path = startup-nextjs-main/CoachellaSolarServices
+	url = https://github.com/rigstire/CoachellaSolarServices.git
